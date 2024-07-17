@@ -1,29 +1,29 @@
-const farmAnimals = 'cow horse sheep pig chicken';
+// const farmAnimals = 'cow horse sheep pig chicken';
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-const muppet = {
-  muppetName: 'Miss Piggy',
-  color: 'pink',
-  song: 'Never Before, Never Again',
-  job: 'Cast member of The Muppet Show',
-  partner: 'Kermit'
-};
+// const muppet = {
+//   muppetName: 'Miss Piggy',
+//   color: 'pink',
+//   song: 'Never Before, Never Again',
+//   job: 'Cast member of The Muppet Show',
+//   partner: 'Kermit'
+// };
 
-const nestedMuppet = {
-  nestedName: 'Kermit',
-  nestedColor: 'green',
-  album: {
-    theMuppetMovie: {
-      song1: 'Rainbow Connection',
-      song2: 'Moving Right Along',
-      song3: 'Never Before, Never Again',
-      song4: 'I Hope That Something Better Comes Along',
-    },
-  },
-  nestedJob: 'Host of The Muppet Show',
-  nestedPartner: 'Miss Piggy'
-};
+// const nestedMuppet = {
+//   nestedName: 'Kermit',
+//   nestedColor: 'green',
+//   album: {
+//     theMuppetMovie: {
+//       song1: 'Rainbow Connection',
+//       song2: 'Moving Right Along',
+//       song3: 'Never Before, Never Again',
+//       song4: 'I Hope That Something Better Comes Along',
+//     },
+//   },
+//   nestedJob: 'Host of The Muppet Show',
+//   nestedPartner: 'Miss Piggy'
+// };
 
 // Strings
 
@@ -46,3 +46,94 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+// index.js
+
+// String destructuring
+const animalSounds = {
+  moo: "cow",
+  neigh: "horse",
+  baa: "sheep",
+  oink: "pig",
+  cluck: "chicken"
+};
+
+const { moo, neigh, baa, oink, cluck } = animalSounds;
+
+const animalNames = {
+  bessie: "cow",
+  dolly: "sheep",
+  babe: "pig",
+  little: "chicken"
+};
+
+const { bessie, dolly, babe, little } = animalNames;
+
+const animalColors = {
+  blackAndWhite: "cow",
+  black: "sheep",
+  pink: "pig"
+};
+
+const { blackAndWhite, black, pink } = animalColors;
+
+// Array destructuring
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+const [red, orange, yellow, green, blue, indigo, violet] = rainbowColors;
+const [r, o, y, g, b, , v] = rainbowColors;
+const [, , , , , indg] = rainbowColors;
+
+// Object destructuring
+const muppet= {
+  muppetName: "Miss Piggy",
+  color: "pink",
+  song: "Never Before, Never Again",
+  job: "Cast member of The Muppet Show",
+  partner: "Kermit",
+  songs: ["The Rainbow Connection", "Moving Right Along", "Bein' Green", "I Hope That Something Better Comes Along"],
+  nested: {
+    job: "Host of The Muppet Show",
+    partner: "Miss Piggy"
+  }
+};
+
+const { muppetName, color, song, job, partner, songs, nested } = muppet;
+const [ , song2, , song4 ] = songs;
+const { job: nestedJob, partner: nestedPartner } = nested;
+
+// module.exports = {
+//   moo,
+//   neigh,
+//   baa,
+//   oink,
+//   cluck,
+//   bessie,
+//   dolly,
+//   babe,
+//   little,
+//   blackAndWhite,
+//   black,
+//   pink,
+//   red,
+//   orange,
+//   yellow,
+//   green,
+//   blue,
+//   indigo,
+//   violet,
+//   r,
+//   o,
+//   y,
+//   g,
+//   b,
+//   v,
+//   indg,
+//   muppetName,
+//   color,
+//   song,
+//   job,
+//   partner,
+//   song2,
+//   song4,
+//   nestedJob,
+//   nested
